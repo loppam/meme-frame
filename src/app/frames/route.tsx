@@ -31,10 +31,10 @@ const handleRequest = frames(async (ctx) => {
       ),
       buttons: [
         // Buttons for sharing or tipping as before
-        <Button action="post" target={{ query: { value: "No" } }}>
+        <Button key="share" action="post" target={{ query: { value: "No" } }}>
           Share
         </Button>,
-        <Button action="post" target={{ query: { value: "No" } }}>
+        <Button key="tip" action="post" target={{ query: { value: "No" } }}>
           Tip Me
         </Button>,
       ],
@@ -45,15 +45,17 @@ const handleRequest = frames(async (ctx) => {
       image:
         "https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       buttons: [
-        // Button to fetch a meme
-        <Button action="post" target={{ query: { value: "Yes" } }}>
+        <Button
+          key="get-meme"
+          action="post"
+          target={{ query: { value: "Yes" } }}
+        >
           Get Meme
         </Button>,
-        // Buttons for sharing or tipping as before
-        <Button action="post" target={{ query: { value: "No" } }}>
+        <Button key="share" action="post" target={{ query: { value: "No" } }}>
           Share
         </Button>,
-        <Button action="post" target={{ query: { value: "No" } }}>
+        <Button key="tip" action="post" target={{ query: { value: "No" } }}>
           Tip Me
         </Button>,
       ],
